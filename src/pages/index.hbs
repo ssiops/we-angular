@@ -1,0 +1,67 @@
+<script src="./js/bs-demo{{#if production}}.min{{/if}}.js"></script>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>Hello World!</h1>
+    <p>Behold, \{\{'AngularJS is working!'\}\}</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni dolor praesentium quisquam quo dolores quod neque dignissimos unde quibusdam provident voluptate ut ab nihil sed incidunt adipisci natus deserunt nostrum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt consequuntur hic rerum. Soluta ducimus recusandae repudiandae dicta blanditiis beatae distinctio dolores magnam fugit error iusto alias mollitia delectus et temporibus!</p>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <h2>Accordion</h2>
+      <div ng-controller="AccordionDemoCtrl">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="oneAtATime">
+          Open only one at a time
+        </label>
+
+        <accordion close-others="oneAtATime">
+          <accordion-group heading="Static Header, initially expanded" is-open="true">
+            This content is straight in the template.
+          </accordion-group>
+          <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+            {{group.content}}
+          </accordion-group>
+          <accordion-group heading="Dynamic Body Content">
+            <p>The body of the accordion group grows to fit the contents</p>
+              <button class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
+              <div ng-repeat="item in items">{{item}}</div>
+          </accordion-group>
+          <accordion-group is-open="isopen">
+              <accordion-heading>
+                  I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
+              </accordion-heading>
+              This is just some content to illustrate fancy headings.
+          </accordion-group>
+        </accordion>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <h2>Recusandae voluptatum libero</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe sed assumenda commodi ea impedit aspernatur neque dicta temporibus ipsam minus quod ad id voluptatibus. Minus impedit odio pariatur nihil necessitatibus?</p>
+      <p>Ipsa incidunt cupiditate blanditiis molestiae ea. Quaerat eum itaque aspernatur hic voluptatem ipsam natus dolorum quas illum magni repellendus consectetur nihil exercitationem. Quasi quaerat laborum porro nemo laboriosam repudiandae illum.</p>
+    </div>
+    <div class="col-md-4">
+      <h3>Lorem ipsum dolor sit amet</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sequi laudantium quod placeat voluptate hic quas aliquid vel ullam commodi modi cupiditate quos eaque perspiciatis impedit rerum ab maxime pariatur?</p>
+      <p>Ipsum doloremque porro voluptate excepturi doloribus aperiam esse officia totam dolores natus voluptatibus cumque. Hic enim rem eius aut voluptas illum eos commodi numquam delectus aspernatur fugiat doloribus ad quas.</p>
+    </div>
+    <div class="col-md-4">
+      <h3>Perferendis autem perspiciatis</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae velit rerum voluptas hic illum ab vitae ducimus veniam blanditiis voluptates nobis quis consequatur. Consectetur quis tempore ipsa dolor nobis placeat?</p>
+      <p>Perferendis atque quos illo laborum dicta odit saepe in suscipit accusamus quaerat sed vero error itaque deleniti dignissimos totam incidunt aperiam veniam amet tenetur. Dignissimos soluta asperiores itaque numquam laborum!</p>
+    </div>
+    <div class="col-md-4">
+      <h3>Provident error reprehenderit</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum laboriosam provident rem esse corporis vero qui sunt veniam eum aut accusamus architecto fugit asperiores. Ut perspiciatis quisquam vero eius molestias.</p>
+      <p>Repudiandae sed velit aliquid impedit delectus itaque quasi praesentium nobis veniam culpa placeat ducimus asperiores expedita obcaecati minus laudantium quaerat laborum reiciendis perferendis fugiat maiores deleniti illum dicta ut molestias.</p>
+    </div>
+  </div>
+</div>
