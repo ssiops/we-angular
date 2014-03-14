@@ -1,4 +1,4 @@
-angular.module('bsui', ['ui.bootstrap']);
+angular.module('default', ['ui.bootstrap']);
 
 !function () {
   
